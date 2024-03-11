@@ -1,0 +1,6 @@
+we are going to start the node 
+as we write js code we execute the js code inside the browser but we cannot execute  it outside of the browser.
+when we write js code it is execute through the js engine and js engine is only execute in the individual browser .
+rayn dayl connected v8 engine to the c++ and called it node js 
+with the node js we can execute the code outside of the browser .
+node is simply runtime env for the js 
