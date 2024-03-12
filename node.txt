@@ -4,3 +4,19 @@ when we write js code it is execute through the js engine and js engine is only 
 rayn dayl connected v8 engine to the c++ and called it node js 
 with the node js we can execute the code outside of the browser .
 node is simply runtime env for the js 
+here in node dom is not included or we can say window object is not available
+modules in node js :-Modules help in organizing and structuring code, promoting code reusability, and enhancing the maintainability of a Node.js application.
+Node.js uses the require function to include modules. The require function takes the module name (either a core module or a path to a user-defined module) and returns the module's exports
+t's also common to create modules that export multiple functions or objects. The module.exports object can be extended with additional properties to expose various elements from a module
+file handling in node js :- File handling in Node.js involves using the built-in fs (File System) module, which provides methods for interacting with the file system
+function like :- reading file , writing file , delete file , append file , mkdr , copy file .
+
+node js architecture :- first of all client request to the node js server , then the request is gone inside the event queue , and the 
+event queue is connected to the event loop  the function of event loop is to take the request from the event queue and process it 
+our request is of two type first is async and sync req or we can say blocking and non blocking req 
+if it is blocking opreationn then the request is gone to the thread pool (it have worker to perform the tasks or we can say threads )
+and if its is non blocking(directly opreationn is done )  then callback function will be passed as a parameter to that function so when ever the task is completed the call back function will be executed  
+let's see how we can do this : -
+javascript has only one thread but with the help of event loop and worker threads  
+we can achieve parallelism by using callback functions  js uses single threaded event loop model which means at any time there is only one block of JS code being executed.
+js uses single threaded event loop model where all the tasks are placed into the queue  and after each task is finished from the queue the next task is taken out of the queue and executed
