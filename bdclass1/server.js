@@ -25,6 +25,7 @@ const mongoose = require('mongoose');
 mongoose.connect('url',{
 
 });
+// we connect  our database using mongoose .
 /* const mongoose = require('mongoose');
 
 const mongoURI = 'mongodb://localhost:27017/your-database-name';
@@ -36,4 +37,14 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
  .catch((error) => {
     console.error('Error connecting to MongoDB:', error.message);
 });*/
-  
+// as we know that our main file is server.js but if we want to add  any new functionality or module then we will write it so it is confusion or bad
+// readblity so we use mvc archithecutre
+// we create our routes folder in which we create our all the routes and define them 
+// if we add routes then we have to also create the functionality  of that routes  in controllers folder (we define buisness logic in the controller folder)
+// buisneess logic is to create the entry in the database
+// and in models we have schema(descp/structure of data) of that collection in which all the details of the objects is there
+// controller is used for handling the request and response 
+// service is used for business logic 
+// view is used for presentation part 
+// config file  contains all the configuration details of the application  like db connection etc
+// env file  contain all the environment variables 

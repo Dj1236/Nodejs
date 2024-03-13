@@ -20,3 +20,77 @@ let's see how we can do this : -
 javascript has only one thread but with the help of event loop and worker threads  
 we can achieve parallelism by using callback functions  js uses single threaded event loop model which means at any time there is only one block of JS code being executed.
 js uses single threaded event loop model where all the tasks are placed into the queue  and after each task is finished from the queue the next task is taken out of the queue and executed
+http server :- const http = require('http');
+
+// Create a server object
+const server = http.createServer((req, res) => {
+  // Set the response HTTP header with status code 200 and Content-Type text/plain
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  
+  // Send the response body as "Hello World"
+  res.end('Hello World\n');
+});
+
+// Specify the port number the server will listen on
+const port = 3000;
+
+// Start the server and make it listen on the specified port
+server.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});
+url in node:- parsing(divide url) , formating(joins the url ) , building(concating url) , extracting(executing)
+http methods:- jyare pan aapde browser ma search kariye tyare e by default get method  use kare 
+get req:- when you want to get data from the browser .
+post :- when you want to send and mutate data to the browser.
+put :- upload
+patch :- change karva mate
+delete :- delete karva mate
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  if (req.method === 'GET') {
+    // Handle GET request
+  } else if (req.method === 'POST') {
+    // Handle POST request
+  } else if (req.method === 'PUT') {
+    // Handle PUT request
+  } else if (req.method === 'DELETE') {
+    // Handle DELETE request
+  } else {
+    res.writeHead(405); // Method Not Allowed
+    res.end();
+  }
+});
+
+const port = 3000;
+server.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});
+const express = require('express');
+const app = express();
+
+// GET request
+app.get('/', (req, res) => {
+  res.send('GET request received');
+});
+
+// POST request
+app.post('/', (req, res) => {
+  res.send('POST request received');
+});
+
+// PUT request
+app.put('/', (req, res) => {
+  res.send('PUT request received');
+});
+
+// DELETE request
+app.delete('/', (req, res) => {
+  res.send('DELETE request received');
+});
+
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Express server running at http://localhost:${port}/`);
+});
+
