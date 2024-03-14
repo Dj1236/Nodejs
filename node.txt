@@ -94,3 +94,47 @@ app.listen(port, () => {
   console.log(`Express server running at http://localhost:${port}/`);
 });
 
+what is express js :-Express.js is a popular web application framework for Node.js that simplifies the process of building web applications and APIs. 
+It provides built-in support for handling various HTTP methods.
+You can create an Express app and define routes for different HTTP methods using methods like app.get(), app.post(), app.put(), and app.delete().
+const express = require('express');
+const app = express();
+
+// GET request
+app.get('/', (req, res) => {
+  res.send('GET request received');
+});
+
+// POST request
+app.post('/', (req, res) => {
+  res.send('POST request received');
+});
+
+// PUT request
+app.put('/', (req, res) => {
+  res.send('PUT request received');
+});
+
+// DELETE request
+app.delete('/', (req, res) => {
+  res.send('DELETE request received');
+});
+
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Express server running at http://localhost:${port}/`);
+});
+
+what is Versioning in nodejs ?  ^ :- aana thi upar na version download kare 
+version:- ^4.18.2 2is minor(optional) fixes in the version. 18is reccommned(changing or addding feature) bugged fixed version   4 is a major relase in the update major and breaking update 
+Versioning is a technique used to manage different versions of APIs or software while maintaining backward compatibility with older versions. In the context of Node  
+
+What is REST API? 
+A RESTful web service is an application programming interface that uses the Representational State Transfer .REST stands for Representational State Transfer.
+It's an architectural style that defines how the client interacts with the server to get data
+rules(standards) of rest:- 1) works on server client architecture .
+( the html document that is send by the server is in the response of the client req is SSR (server side rendering))
+if you know that your client is browser than you can send html document it is good practicing but if it is mobile device or any else device 
+than we have to give the json data that we have to parse in the any used frontend technology
+2. always respect the http methods:-
+
