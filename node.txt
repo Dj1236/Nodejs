@@ -138,3 +138,47 @@ if you know that your client is browser than you can send html document it is go
 than we have to give the json data that we have to parse in the any used frontend technology
 2. always respect the http methods:-
 
+
+express middleware :-  it's just functions that run and execute some specific task before or after executing other code/function -GET : retrieve information from the server
+middleware is the function that process the req   and res object which contain details about the incoming request
+ek code ma multiple middleware hoi sake e req check kare ke req safe aane authorized che ne 
+middleware has an acess of req and response and next middleware object
+
+
+Http headers and status codes:-(extrea information )
+important part of api request and response as they contains the meta data asscoiated with an api .
+it carry  information about the request and provide information about the response  
+- Http headers are key value pairs sent by the  client to the server along with the request method
+- Status Codes are standard responses from the server indicating various conditions and actions for the clients
+- Status Codes are standard responses from the server indicating various conditions and results 
+
+Mongo db:-  mongo is no-sql document based database ,support aggeration pipelines, works on the BSON data , 
+like sql it stores data in the table  format but instead of tables it uses collections which contain documents .
+
+model view controller architecture ( MVC):-
+MVC stands for Model-View-Controller, which is a software architectural pattern commonly used in web development, including Node.js applications.
+ MVC separates an application into three main components
+ Model: The Model represents the data and business logic of the application. It interacts with the database or external data sources to perform CRUD (Create, Read, Update, Delete) operations and encapsulates the data manipulation and validation logic. In Node.js, the model layer typically consists of Mongoose models when using MongoDB or Sequelize models when using SQL databases.
+
+View: The View is responsible for presenting the data to the user in a user-friendly format. It generates the user interface (UI) elements such as HTML, CSS, and client-side JavaScript to render the data received from the controller or directly from the model. In Node.js, views are often created using templating engines like EJS, Pug (formerly Jade), Handlebars, etc.
+
+Controller: The Controller acts as an intermediary between the Model and the View. It receives user input from the View, processes it, interacts with the Model to perform necessary operations, and determines which View to render in response. Controllers contain the application's business logic, handle HTTP requests, and orchestrate the flow of data between the Model and the View. In Node.js, controllers are implemented as route handlers using frameworks like Express.js.
+
+In a Node.js application following the MVC pattern:
+
+Routes define the application's endpoints and map HTTP requests to corresponding controller actions.
+Controllers handle the incoming requests, process the data, interact with the model layer, and render the appropriate views.
+Models represent the application's data structures and provide methods to perform database operations.
+Views render dynamic content using templates, incorporating data provided by controllers.
+Here's a simplified example of a Node.js application structure using the MVC pattern:
+project/
+├── controllers/
+│   └── userController.js
+├── models/
+│   └── userModel.js
+├── views/
+│   └── userView.ejs
+├── routes/
+│   └── userRoutes.js
+├── app.js (or index.js)
+└── package.json
