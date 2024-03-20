@@ -20,3 +20,6 @@ connectWithDb();
 app.listen(3000, (req,res)=>{
     console.log('app is started at port no 3000');
 })
+app.get("/", (req,res)=>{
+    res.send(`<h1>this is a default home page </h1>`)
+})

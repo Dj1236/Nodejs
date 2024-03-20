@@ -1,0 +1,9 @@
+client server model:- 
+client req some data from the server .and server send the data to the client .in the form of response.
+when we search any thing in the browser then the string is converted into the address by dns resolver
+then we get the ip address and that ip request is go to the server to find the data .
+then after getting data from the server the server send the data that is request by the client
+
+now lets see what is express js 
+express is one type of nodejs framework by which we can create a server side application .
+what is mounting
