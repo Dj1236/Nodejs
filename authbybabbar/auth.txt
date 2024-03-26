@@ -1,0 +1,14 @@
+now lets see authentication and authorization :-
+JWT :- json web tokens and cookies 
+jwt is a secured way for information transportation .
+jyare pan aapde koi pan website ma login kariye toh ema token generate thai 
+jwt is made up of three things payload , header , signature. aane last ma key nakh vathi json webtoken generate thai.
+token is nothing just piece of information .
+this token is given by the server and give to the client .
+summary :- when client req something in the browser than req goes to the server and then server create the token and give that token to the client 
+and client use this token to prove thier authorization and authentication every time .
+jwt is not store in the local machine 
+now lets see what is cookies :- cookies are the text files that is locally store in the pc .by this login information is saved inside the pc .
+example :- when we visit the ecommerce website and we put something in the cart and when we close the website and again reopen it than it will saved that info and show us .
+we can also use cookies in the auth process .
+
