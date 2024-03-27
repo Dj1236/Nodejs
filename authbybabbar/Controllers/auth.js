@@ -1,5 +1,10 @@
 const bcyrpt = require('bcrypt');
 const User = require('../model/user.js');
+const jwt = require('jsonwebtoken');
+const { use } = require('../Routes/user.js');
+require('dotenv').config();
+
+
 
 
 //sign up routehandler
@@ -36,6 +41,73 @@ exports.signup = async(req,res)=>{
             success:false,
             message:'user cannot regeister,pls try again'
         });
+        
+    }
+}
+
+// now for the login page 
+exports.login = async (req,res)=>{
+    try {
+        const {email,password}= req.body;
+        // validation of email and password
+        if(!email||!password){
+            res.status(400).json({
+                success:false,
+                message:'please fill all the details carefully '
+            });
+
+
+        }
+        // check for the registered user 
+        const user = await User.findOne({email})
+        // if not a registered user 
+        if(!user){
+            return res.status(400).json({
+                success:false,
+                message:'user is not registered'
+            })
+        }
+        const payload = {
+            email : user.email,
+            id :user.id,
+            role:user.role
+        }
+        // verify password and jwt token 
+        if (await bcyrpt.compare(password,user.password)){
+            // if password match
+            let token = jwt.sign(payload,process.env.JWT_SECRET,
+                {
+                    expiresIn:"2h"
+                });
+            user.token = token;
+            user.password = undefined;
+            const options = {
+                expires:new Date (Date.now()+ 3*24 *60*60*10000),
+                httpOnly:true,
+            }
+            res.cookies("token",token,options).status(200).json({
+                success:true,
+                message:'user logged in successfully'
+            })  
+                
+
+
+
+        }
+        else{
+            // password does not match 
+            res.status(402).json({
+                success:false,
+                message:'password incorrect'
+            })
+        }
+        
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({
+            success:false,
+            message:'login failure'
+        })
         
     }
 }

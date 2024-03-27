@@ -1,0 +1,7 @@
+lets see what is authentication and authorization.:-
+there is two patterns of authentication one is stateless and one is statefull.
+statefull means they maintain server side data or else state. stateless means no state.
+statefull:-when client req from the server of username/pass then server give response uid to us which is session unique id
+now if we want to search anything then server will remember our uid . in the form of cookies, headers,responses
+in server side rendering we use cookies and in rest api we use headers .
+in express flow we have client one middleware in between and end point route 

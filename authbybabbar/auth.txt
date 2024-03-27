@@ -12,3 +12,5 @@ now lets see what is cookies :- cookies are the text files that is locally store
 example :- when we visit the ecommerce website and we put something in the cart and when we close the website and again reopen it than it will saved that info and show us .
 we can also use cookies in the auth process .
 
+middleware :- middleware are the function which invokes when the req is done .
+1) authentication using middleware 
